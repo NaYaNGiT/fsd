@@ -1,6 +1,6 @@
-if(process.env.NODE_ENV !== 'production'){
+/*if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
-}
+}*/
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -14,7 +14,7 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DBURL, {
+mongoose.connect("mongodb+srv://nayanjyoti2012:nayanatroot@ogcluster.lu2x9.mongodb.net/?retryWrites=true&w=majority&appName=OGCluster", {
     useNewUrlParser: true
 })
 const db = mongoose.connection
